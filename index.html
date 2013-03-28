@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head class="no-js" lang="en">
+	
+	<!-- Meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="title" content="This is a political statement." />
+	<meta name="description" content="Beaurocracy and bad taste produce culture" />
+	
+	<meta name="robots" content="index,follow" />
+	
+	
+	
+	<title>Game Parody</title>
+	
+	<!-- Whatever you do, do it with style -->
+	<link rel="stylesheet" href="http://thrasos.net/the_cyprus/data/css/screen.css" />
+	<script type="text/javascript" src="http://thrasos.net/the_cyprus/data/js/modernizr-1.7.min.js"></script>
+</head>
+
+<body>
+
+<!-- hidden video element, used to draw each canvas -->
+<video width="600" height="300" autobuffer preload="auto" id="screen">
+	<source src="http://thrasos.net/the_cyprus/data/cy_eng(480).mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+	<source src="http://thrasos.net/the_cyprus/data/cy_eng(480).webm" type='video/webm; codecs="vp8, vorbis"'>
+	
+</video>
+<!--/hidden video element -->
+
+<section id="loading">
+	<h1>THE CYPRUS</h1>
+	
+	<!-- instructions -->
+  <div id="instructions">
+	<h2>HOW TO PLAY</h2>
+	  <ol id="steps">
+		  <li><p>Drag and drop the pieces of the video to their correct location before time runs out.</p></li>
+		  <li><p>When the correct piece is in the correct cell it will lock into place.</p></li>
+		  <li><p>If you can complete the puzzle in time you will be rewarded with a free golden olive branch.</p></li>
+			<li><p>Print the echo friendly Olive Branch and head to Larnaca airport to greet the europeans. </p></li>
+	  </ol>
+	</div>
+	<!--/instructions -->
+	
+	<!-- loader -->
+	<div id="loader">
+		<ul id="status">
+			<li>DATA RECEIVED</li>
+			<li>VIDEO READY TO PLAY</li>
+			<li>CLICK TO START</li>
+		</ul>
+		<img id="indicator" src="http://thrasos.net/the_cyprus/data/images/indicator.gif" width="50" height="50" alt="" />
+	</div>
+	<!--/loader -->
+</section>
+
+<section id="main">
+	<!-- header -->
+	<header>
+		<img src="http://thrasos.net/the_cyprus/data/images/logo.gif" width="228" height="28" alt="The Cyprus" />
+	</header>
+	<!--/header -->
+	
+	<!-- puzzle -->
+	<div id="puzzle">
+	</div>
+	<!--/puzzle -->
+	
+	<!-- about -->
+	<div id="about">
+		<time id="countdown">00:00</time>
+		<h2>ABOUT THIS PROJECT</h2>
+		<p>This master piece of a song was created for the cypriot republic european presidency.<br /><a href="http://www.cy2012.eu/" target="_blank">Learn more &rarr;</a></p>
+		<p>Even though it was happily paid for with our taxes, which we all agreed upon, it is not proudly hosted on the official EU presidency website. Probably because of the huge public embracing it has been receiving.<br /><a href="http://www.youtube.com/watch?v=opXmwFPoIk0" target="_blank">See the original &rarr;</a></p>
+		<img id="countdown-fg" src="data/images/countdown-fg.png" width="200" height="100" alt="" />
+	</div>
+	<!--/about -->
+	
+	<!-- controls -->
+	<button id="mute-btn"></button>
+	<button id="replay-btn">REPLAY THE COMPLETED VIDEO?</button>
+	<!--/controls -->
+	
+	<!-- footer -->
+	<footer>
+		<p>Special thanx to , <a href="http://www.youtube.com/watch?v=opXmwFPoIk0&feature=plcp" target="_blank">Savva Hadjisavva</a>.<br/>COPYRIGHT &copy; 2011<a href="http://www.cyprus.gov.cy/portal/portal.nsf/dmlcitizen_gr/dmlcitizen_gr?OpenDocument" target="_blank"> REPUBLIC OF CYPRUS</a>. ALL RIGHTS RESERVED.</p>
+		<section id="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-text="Welcome to the cyprus video #cyprus" data-count="none" data-via="thrasos">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></section>
+		<section id="like"><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://thrasos.net" layout="button_count" show_faces="false" width="100"></fb:like></section>
+	</footer>
+	<!--/footer -->
+</section>
+
+<!-- win -->
+<aside id="win">
+	<h2>GOOD WORK, FRIEND!</h2>
+	<p>Against all odds, you've managed to solve the puzzle. The reward? This olive brach:</p>
+	<p><a href="javascript:void(0);" id="download">Download (800KB PNG) &nbsp; &darr;</a></p>
+</aside>
+<!--/win -->
+
+<!-- fail -->
+<aside id="fail">
+	<h2>YOU TOTALLY BLEW IT!</h2>
+	<p>If this was the ancient times you would be ostracized, Try again and make us proud:</p>
+	<p><a href="javascript:window.location.href = window.location.href;">Try Again &nbsp; &#x21A9;</a></p>
+</aside>
+<!--/fail -->
+
+
+
+<!-- JavaScript, the client side sauce -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="lib/js/jquery-1.6.1.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script type="text/javascript">window.jQuery.ui || document.write('<script src="lib/js/jquery-ui.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="http://thrasos.net/the_cyprus/data/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://thrasos.net/the_cyprus/data/js/cyprus.parts.js"></script>
+
+<div id="kanei">
+	<a href="http://thrasos.net/the_cyprus/pelara.html" >Κανεί με την πελάρα ρε κουμπάρε.</a>
+</div>
+
+
+</body>
+</html>
